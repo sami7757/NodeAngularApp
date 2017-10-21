@@ -6,11 +6,13 @@ This is a simple angular app that uses node as a server side rendering
 
 To run the app, you must have bower and node installed on your machine.
 
-Run the below commands in the applications root directory
+Run the below commands in the applications root directory 
 
     bower install
 
     node app.js
+    
+    open localhost:3000 in the browser
 
 
 PS: There is no directive for the table row, for now its direcly on the users page. 
