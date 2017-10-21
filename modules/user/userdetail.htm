@@ -2,8 +2,10 @@
 <div class="container" >
     <a ui-sref="users({id:'{{x.id}}'})">Get back to users!</a>
 <div class="container">
-    <p>Firstname: {{user.firstName}} </p>
-    <p>Lastname: {{user.lastName}} </p>
-    <p>Age: {{ user.dateOfBirth | ageFilter }} </p>
+    <div>Firstname: <input type="text" ng-model="viewModel.firstName" value="{{viewModel.firstName}}" />  </div>
+    <div>Lastname: <input type="text" ng-model="viewModel.lastName" value="{{viewModel.lastName}}" /> <div>
+        <div>Age: {{ user.dateOfBirth | ageFilter }} <div>
+
+            <button ng-click="save();" class="btn btn-primary"> Save </button>
 </div>
 </div>
