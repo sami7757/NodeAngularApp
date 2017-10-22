@@ -10,8 +10,8 @@ Run the below commands in the applications root directory
 
     npm install
     bower install
-    node app.js
     gulp    
+    node app.js
     
     now just open any browser and navigate to this url:  localhost:3000 
 
