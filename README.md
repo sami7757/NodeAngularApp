@@ -8,11 +8,12 @@ To run the app, you must have bower and node installed on your machine.
 
 Run the below commands in the applications root directory 
 
+    npm install
     bower install
-
     node app.js
+    gulp    
     
-    open localhost:3000 in the browser
+    now just open any browser and navigate to this url:  localhost:3000 
 
 
 PS: There is no directive for the table row, for now its direcly on the users page. 
