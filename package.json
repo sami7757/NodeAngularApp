@@ -7,13 +7,16 @@
   },
   "author": "Newsletter2go",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
   "devDependencies": {
     "bower": "^1.7.0",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-bower": "0.0.10",
-    "gulp-notify": "^2.2.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0"
   }

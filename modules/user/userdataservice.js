@@ -1,6 +1,6 @@
 
 angular.module('user')
-.service('userdata', function($http, $q) {
+.service('userdata',['$http','$q', function($http, $q) {
     var users = null;
     var getUsersAsync = function() { 
     return	$http.get('http://localhost:3000/data/users.json').then(function(res) {
@@ -37,4 +37,4 @@ angular.module('user')
 
         return def.promise;
     };
-});
+}]);

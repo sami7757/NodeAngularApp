@@ -1,5 +1,5 @@
 angular.module('user')
-.controller('UserController',function($scope,$window,$uibModal,$log, userdata) {
+.controller('UserController',['$scope','$uibModal','$log','userdata',function($scope,$uibModal,$log, userdata) {
     $scope.users = {};
     $scope.isAllSelected = false;
     $scope.selectedUsers = [];
@@ -35,18 +35,15 @@ angular.module('user')
         $scope.selectedUsers = [];
         _.map($scope.users, function(user) {
             if($scope.isAllSelected) 
-                $scope.selectedUsers.push(user);
+                $scope.selectedUsers.push(user.id);
             user.isSelected = $scope.isAllSelected;
         });
     };
     $scope.downloadUsers = function() {
-        userdata.getUsers().then(function(data) {
-            if($scope.isAllSelected)
-                var users = data;
-            else 
-                users = data.filter(function(user) {
-                    return $scope.selectedUsers.indexOf(user.id) >= 0;
-                });
+        userdata.getUsers().then(function(data) {            
+            var users = data.filter(function(user) {
+                return $scope.selectedUsers.indexOf(user.id) >= 0;
+            });
             JSONToCSVConvertor(users, "The Selected Users", true);
         });
     };
@@ -77,4 +74,4 @@ angular.module('user')
           $log.info('Modal dismissed at: ' + new Date());
         });	  
     };
-})
+}]);

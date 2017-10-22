@@ -1,5 +1,5 @@
 angular.module('user')	  
-.controller('UserDetailsController',function($scope,$window,$http, $state, $stateParams, userdata) {
+.controller('UserDetailsController',['$scope','$stateParams','userdata', function($scope, $stateParams, userdata) {
     userdata.getUserWithId($stateParams.id).then(function(user){ 
         $scope.user = user;
         $scope.viewModel = { firstName:user.firstName, lastName: user.lastName };
@@ -8,4 +8,4 @@ angular.module('user')
             $scope.user.lastName = $scope.viewModel.lastName;
         };
     });
-})
+}]);
